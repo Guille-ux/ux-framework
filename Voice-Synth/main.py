@@ -14,7 +14,7 @@ out_file = sys.argv[3]
 with open(filename, "r") as f:
 	text = f.read()
 for char in to_delete:
-	text.strip(char)
+	text = text.replace(char, "")
 text = text.strip('"')
 text = text.lower()
 words = text.split()
