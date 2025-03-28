@@ -4,8 +4,8 @@ import json
 import time
 
 
-class Tinrux:
-	def __init__(self, hostname, port=6379, buffer_size=1024*1024, rdb_file="tdb.json", new=True):
+class TinruxServer:
+	def __init__(self, hostname, port, buffer_size=1024*1024, rdb_file="tdb.json", new=True):
 		self.version = "1.0"
 		self.host = hostname
 		self.port = port
