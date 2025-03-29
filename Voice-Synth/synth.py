@@ -113,6 +113,11 @@ class VoiceMixer:
 		self.voice = voice_dir
 		self.prefix = prefix
 		self.exports = exports
+		self.consonant_list = [
+    'r', 'l', 'm', 'n', 'ŋ', 'ʈʃ', 'dʒ', 'f', 'v', 'θ', 'ð', 's', 'z', 
+    'ʃ', 'ʒ', 'h', 'w', 'j', 'p', 'b', 't', 'd', 'k', 'g', 'l', 'm', 
+    'n', 'n', 'd', 'w', 'k', 'p', 't', 'k', 'b', 'd', 'g', 'h'
+]
 	def get_sound(self, sound):
 		if sound is None:
 			print("[!] None Sound Received [!]")
@@ -132,7 +137,10 @@ class VoiceMixer:
 				if output is None:
 					output = audio
 				else:
-					crossfade = self.adaptative_crossfade([audio, output])
+					if sound in self.consonant_list:
+						crossfade = len(audio)
+					else:
+						crossfade = self.adaptative_crossfade([audio, output])
 					output = output.append(audio, crossfade)
 		return output
 	def play_mix(self, sound_list):
@@ -160,11 +168,11 @@ class VoiceMixer:
 		first = audios[0]
 		second = audios[1]
 		if len(first) < len(second):
-			return len(first)//2
+			return round(len(first)/1.5)
 		elif len(first) > len(second):
-			return len(second)//2
+			return round(len(second)/1.5)
 		else:
-			return len(first)//2
+			return round(len(first)/1.5)
 			
 
 class VoiceSynth:
