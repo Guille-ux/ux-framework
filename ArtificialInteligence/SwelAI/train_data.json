@@ -1,0 +1,85 @@
+{
+	"attention":{
+		"outs":[
+		[[0, 0, 1, 0, 0, 0, 0, 0, 0, 0]],
+		[[0, 1, 0, 0, 0, 0, 0, 0, 0, 0]],
+		[[0, 0, 0, 1, 0, 0, 0, 0, 0, 0]],
+		[[0, 1, 0, 0, 0, 0, 0, 0, 0, 0]],
+		[[0, 0, 1, 0, 0, 0, 0, 0, 0, 0]],
+		[[0, 1, 0, 0, 0, 0, 0, 0, 0, 0]],
+		[[1, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+		[[0, 0, 1, 0, 0, 0, 0, 0, 0, 0]],
+		[[0, 1, 0, 0, 0, 0, 0, 0, 0, 0]],
+		[[0, 1, 0, 0, 0, 0, 0, 0, 0, 0]],
+		[[1, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+		[[1, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+		[[1, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+		[[0, 0, 1, 0, 0, 0, 0, 0, 0, 0]],
+		[[0, 1, 0, 0, 0, 0, 0, 0, 0, 0]],
+		[[0, 0, 1, 0, 0, 0, 0, 0, 0, 0]],
+		[[0, 0, 1, 0, 0, 0, 0, 0, 0, 0]]
+		],
+		"inputs":[
+		[
+		{"q":"Hola, que tal estas <null> <null> <null> <null> <null> <null>"},
+		{"q":"Hola, como estas <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"Que es un femboy <null> <null> <null> <null> <null> <null>"},
+		{"q":"te parece bien <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"y si hacemos esto <null> <null> <null> <null> <null> <null>"},
+		{"q":"Me llamo <null> <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"Kaboom <null> <null> <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"Como te llamas <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"Que eres <null> <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"Soy Quique <null> <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"viva españa <null> <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"golpe de estado <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"dios existe <null> <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"eres muy subnormal <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"como se hace <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"es un problema <null> <null> <null> <null> <null> <null> <null>"},
+		{"q":"a sido facil <null> <null> <null> <null> <null> <null> <null>"}
+		]
+		]
+	},
+	"neural":{
+		"outs":[
+			16,
+			17,
+			19,
+			6,
+			12,
+			29,
+			22,
+			24,
+			38,
+			31,
+			2,
+			37,
+			32,
+			34,
+			35,
+			3,
+			4
+		],
+		"inputs":[
+		["tal"],
+		["como"],
+		["femboy"],
+		["parece"],
+		["hacemos"],
+		["llamo"],
+		["kaboom"],
+		["llamas"],
+		["eres"],
+		["quique"],
+		["viva"],
+		["golpe"],
+		["dios"],
+		["subnormal"],
+		["se"],
+		["problema"],
+		["facil"]
+		] 
+	}
+}
+
