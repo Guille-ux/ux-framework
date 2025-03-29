@@ -22,5 +22,5 @@ a framework with a lot of things, and they work
 ### Notes
 - **Voice Synthethizer**
 	- You need to put in a folder the 44 english phonemes.
-	- If is a problem with the length of the audio, you only need to change the ms of the crossfade at main.py
 	- link for the phonems: <a href="https://github.com/moh3n9595/phonemes-dataset">Phonemes</a>
+	- I recommend edit the phonemes files because in some of them there is a large pause
