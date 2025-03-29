@@ -138,7 +138,7 @@ class VoiceMixer:
 					output = audio
 				else:
 					if sound in self.consonant_list:
-						crossfade = len(audio)
+						crossfade = (len(audio), len(output))
 					else:
 						crossfade = self.adaptative_crossfade([audio, output])
 					output = output.append(audio, crossfade)
