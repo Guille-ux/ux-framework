@@ -109,10 +109,9 @@ class EncodeTranslator:
 			return None
 
 class VoiceMixer:
-	def __init__(self, voice_dir="voice", prefix="mp3", exports="exports", crossfade=350):
+	def __init__(self, voice_dir="voice", prefix="mp3", exports="exports"):
 		self.voice = voice_dir
 		self.prefix = prefix
-		self.crossfade = crossfade
 		self.exports = exports
 	def get_sound(self, sound):
 		if sound is None:

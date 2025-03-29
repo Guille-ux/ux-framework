@@ -3,7 +3,7 @@ from synth import arpabet_to_phoneme
 import cmudict
 import sys
 
-synthethizer = VoiceMixer(voice_dir="dataset", prefix="wav", crossfade=200)
+synthethizer = VoiceMixer(voice_dir="dataset", prefix="wav")
 pronounciation = cmudict.dict()
 
 to_delete = ".,;:-+*|1234567890'¡!¨[]<>_ç{}´`¿?$%#@·'!=ºª"
