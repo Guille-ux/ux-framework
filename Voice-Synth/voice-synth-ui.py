@@ -25,7 +25,7 @@ def synther():
 
 def do(status_text_id):
     try:
-        os.system("python3 main.py script.txt 2 out")
+        os.system("python3 main.py script.txt 1 out")
         canvas.itemconfig(status_text_id, text="Synthesis Successful!", fill="green")
         messagebox.showinfo("Success", "The file was synthesized at exports/")
     except Exception as e:
