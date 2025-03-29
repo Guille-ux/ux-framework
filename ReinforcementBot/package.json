@@ -1,0 +1,40 @@
+{
+  "name": "SwelshinianoV1",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dist-linux": "electron-builder --linux",
+    "dist-win":"electron-builder --win",
+    "dist-mac":"electron-builder --mac"
+    
+  },
+  "keywords": [],
+  "author": "Guillermo Leira Temes",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^35.0.2",
+    "electron-builder": "^25.1.8"
+    },
+ "build": {
+  "appId": "com.swelshinianov1.guille",
+  "productName": "SwelshinianoLocalV1",
+  "files": [
+    "**/*",
+    "!node_modules"
+  ],
+  "directories": {
+    "output": "dist"
+  },
+  "extraFiles":[
+  {
+  	"from":"api/",
+  	"to":"api/",
+  	"filter": ["**/*"]
+  }
+  ]
+}
+}
+
