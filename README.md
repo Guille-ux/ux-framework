@@ -4,7 +4,6 @@ a framework with a lot of things, and they work
 - A DataBase (Tinrux)
 - A Voice Synthethizer using pydub and a folder with all phonems
 - A simplified OpenGL (help using graphics on C) and it has a utility for loading BMP images
-- My Operating System
 - Discord File System
 - Some of my apps
 - Librarys
@@ -28,3 +27,5 @@ a framework with a lot of things, and they work
 	- You need to put in a folder the 44 english phonemes.
 	- link for the phonems: <a href="https://github.com/moh3n9595/phonemes-dataset">Phonemes</a>
 	- I recommend edit the phonemes files because in some of them there is a large pause
+- **Munix Os**
+	- originally i have thinked to include that on this, but github hates me
