@@ -78,7 +78,7 @@ class TinruxServer:
 	def proccess_args(self, args):
 		command = args[0]["data"]
 		if command == b"PING" or command == b"ping":
-			return PONG
+			return "+PONG\r\n"
 		elif command == b"SET" or command == b"set":
 			if len(args) != 4:
 				return "-ERR wrong number of arguments for 'set' command \r\n"
