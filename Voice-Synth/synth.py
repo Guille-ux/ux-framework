@@ -133,7 +133,8 @@ class VoiceMixer:
 				if output is None:
 					output = audio
 				else:
-					output = output.append(audio, self.crossfade)
+					crossfade = self.adaptative_crossfade([audio, output])
+					output = output.append(audio, crossfade)
 		return output
 	def play_mix(self, sound_list):
 		play_sound = self.mix_sound(sound_list)
@@ -156,6 +157,16 @@ class VoiceMixer:
 				output = output.append(audio, 0)
 				output = output.append(space_sound, 0)
 		return output
+	def adaptative_crossfade(self, audios):
+		first = audios[0]
+		second = audios[1]
+		if len(first) < len(second):
+			return len(first)//2
+		elif len(first) > len(second):
+			return len(second)//2
+		else:
+			return len(first)//2
+			
 
 class VoiceSynth:
 	def __init__(self, voice_dir="voice", prefix="mp3"):
