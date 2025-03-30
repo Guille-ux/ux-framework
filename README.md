@@ -29,3 +29,7 @@ a framework with a lot of things, and they work
 	- I recommend edit the phonemes files because in some of them there is a large pause
 - **Munix Os**
 	- originally i have thinked to include that on this, but github hates me
+
+### For the Future
+
+- **ZynkPy** is going to be here
