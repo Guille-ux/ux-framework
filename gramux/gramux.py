@@ -14,4 +14,11 @@ class GramUxLexer:
 		self.source=source
 		self.tokens=self.tokenize()
 	def tokenize(self):
-		while self.source
+		tokens = []
+		pos = 0
+		while pos < len(self.source):
+			match = None
+			for pattern, token_type in TOKEN_PATTERNS:
+				regex = re.compile(pattern)
+				match = regex.match(self.source, pos)
+				
