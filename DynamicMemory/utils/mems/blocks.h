@@ -14,37 +14,28 @@
 /* Copyright (c) 2025 Guillermo Leira Temes
 /* */
 
-#ifndef _MEM_STRUCTS_H
-#define _MEM_STRUCTS_H
+#ifndef _BLOCKS_H
+#define _BLOCKS_H
 
 #include "../types.h"
+#include "mem_structs.h"
 
-typedef struct {
-    uint8_t *mem; // puntero al bloque principal
-    uint32_t size; // tamaño
-    uint32_t used; // parte usada
-} MemArena;
+void init_block_manager(BlockManager *manager, uint8_t *memory, uint32_t size) {
+    manager->pool=memory;
+    manager->size = size;
+    manager->free_list = (MemBlock*)memory;
+    manager->free_list->size = size;
+    manager->free_list->next = NULL;
+    manager->free_list->is_free = 1;
+}
 
-//blocks for the future
+void *allocate_block(BlockManager *manager, uint32_t size) {
+    //implementar
+}
 
-typedef struct {
-    uint32_t size;
-    uint32_t n_arenas;
-    uint32_t arenas_size;
-    uint8_t *memory;
-    MemArena *arenas;
-} MMarena; //Marena Manager
 
-typedef struct MemBlock {
-    uint32_t size;
-    struct MemBlock *next;
-    Bool free;
-} MemBlock;
-
-typedef struct {
-    uint8_t *pool; //se llama pool pero no es más que donde empieza
-    uint32_t size;
-    MemBlock *free_list;
-} BlockManager;
+void free_block(BlockManager *manager, void *ptr) {
+    //implementar
+}
 
 #endif
