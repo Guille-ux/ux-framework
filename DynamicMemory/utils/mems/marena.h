@@ -28,16 +28,25 @@ MMarena new_marena(uint8_t *memory, uint32_t size, uint32_t n_arenas) {
     n_marena.arenas_size = size / n_arenas;
     n_marena.memory = memory;
     MemArena* arenas;
-    finit_arena_mem(n_arenas, arenas);
+    finit_arena_mem(n_arenas, arenas, memory, size);
     return n_marena;
 }
+void init_marena(MMarena *n_marena, uint8_t *memory, uint32_t size, uint32_t n_arenas) {
+    n_marena->size = size;
+    n_marena->n_arenas = n_arenas;
+    n_marena->arenas_size = size / n_arenas;
+    n_marena->memory = memory;
+    MemArena* arenas;
+    finit_arena_mem(n_arenas, arenas, memory, size);
+}
+
 
 void freem(uint8_t *pt, MMarena *memall) {
-    ffreef(pt, memall->n_arenas, memall->memory);
+    ffreef(pt, memall->n_arenas, memall->arenas);
 }
 
 void fmalloc(uint32_t size, MMarena *memall) {
-    fallocate(size, memall->n_arenas, &memall->mem)
+    fallocate(size, memall->n_arenas, memall->arenas);
 }
 
 #endif

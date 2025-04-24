@@ -36,15 +36,15 @@ typedef struct {
 } MMarena; //Marena Manager
 
 typedef struct MemBlock {
-    uint32_t size;
+    uint8_t value;
     struct MemBlock *next;
     Bool free;
 } MemBlock;
 
 typedef struct {
-    uint8_t *pool; //se llama pool pero no es más que donde empieza
     uint32_t size;
     MemBlock *free_list;
 } BlockManager;
+
 
 #endif

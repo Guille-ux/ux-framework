@@ -67,7 +67,7 @@ MemArena* from_where(uint8_t *pt) {
             return &memory[i];
         }
     }
-    return NULL;
+    return (MemArena *)NULL;
 }
 
 void ffree(uint8_t *pt) {
@@ -85,6 +85,19 @@ uint32_t total_used_mem() {
     return sum;
 }
 
+void clean(MemArena *arena) {
+    uint8_t *start_point = &arena->mem[arena->used];
+    uint32_t used = arena->used;
+    uint32_t size = ARENA_SIZE - used;
+    for (uint32_t i=used; i < ARENA_SIZE; i++) {
+        arena->mem[i] = 0;
+    }
+}
 
+void eclean(MemArena *arena) {
+    for (uint32_t i=0; i<ARENA_SIZE; i++) {
+        arena->mem[i]=0;
+    }
+}
 
 #endif
